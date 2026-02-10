@@ -14,10 +14,16 @@ This Repository contains the course material.
 > As preliminary step, update your local copy with `git pull`.
 > The course material is constantly updated. Important updates are notified in the announcements section of the Moodle site of the course.   
 
+# Week 1
 
-Perform the following labs 
+* Intro to the course
+* Intro to Docker
+* Intro to Kathara
+
 * [LAB-K1](LAB-K1)
 * [LAB-K2](LAB-K2)
+
+# Week 2
 * [LAB-K3](LAB-K3)
 * [LAB-K4](LAB-K4)
 * [LAB-K5](LAB-K5)
