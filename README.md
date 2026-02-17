@@ -16,9 +16,9 @@ This Repository contains the course material.
 
 # Week 1
 
-* Intro to the course
-* Intro to Docker
-* Intro to Kathara
+* [Intro to the course](Theory slides/Complementi di Reti.pdf)
+* [Intro to Docker](Theory slides/Intro to Docker.pdf)
+* [Intro to Kathara'](https://github.com/compl-reti-unito/25-26/blob/main/Theory%20slides/001-kathara-introduction.pdf)
 
 * [LAB-K1](LAB-K1)
 * [LAB-K2](LAB-K2)
