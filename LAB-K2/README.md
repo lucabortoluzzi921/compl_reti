@@ -16,13 +16,15 @@ All the activities for the class labs are instead available under the  local `Da
 3. Enter `LAB-K2/K2-TwoHosts` 
    * Read the `lab.conf` and `.startup` files. 
    * Draw the topology 
-   * Q1. What are the IP addresses?
-   * Q2. What are the routing tables?
-   * Q3. What is the current state of images and running containers, before starting Kathara? Show the outputs of the proper `docker` commands.
+   *  Q1. What are the IP addresses?
+   *  Q2. What are the routing tables?
+   *  Q3. What is the current state of images and running containers, before starting Kathara? Show the outputs of the proper `docker` commands.
    * Start the lab with `kathara lstart`.
    * Q4. What is the current state of images and running containers after starting Kathara? Show the outputs of the proper `docker` commands.
    * Q5. Use `ip` command (see the reference table below) to show the IP addresses of the interfaces and the routing tables, for both hosts. 
-   * Q6. Using `ping`, check the connectivity between the two hosts and report the output
+   * Q6. Using `ping`, check the connectivity between the two hosts and report the output. What is going on?
+   Why latency changes over time?
+  
    * Q7. What is the output of `kathara linfo` when the lab is running?
    * Q8. What is the output of `kathara list` when the lab is running?
    * Within a container of a device, create a file (e.g., using `touch prova.txt`)
