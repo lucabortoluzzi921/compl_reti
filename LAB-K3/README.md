@@ -43,21 +43,21 @@ ip address add 192.168.2.128/24 dev eth1
 ```
 Run the lab through `kathara lstart` and test connectivity and performance
 
-**Q1.1** Through `ip address`, report the IP address for all the interfaces (excluded the local loop).
+  * **Q1.1** Through `ip address`, report the IP address for all the interfaces (excluded the local loop).
 
-**Q1.2** Through `ip route`, report the routing tables for `ha`, `hb` and `r1`.
+  * **Q1.2** Through `ip route`, report the routing tables for `ha`, `hb` and `r1`.
 
-**Q1.3** Report the three routing tables according to the following scheme:
-| Network prefix | Gateway | Interface |
-|---|---|---|
-| ... |   |   |
+  * **Q1.3** Report the three routing tables according to the following scheme:
+  | Network prefix | Gateway | Interface |
+  |---|---|---|
+  | ... |   |   |
 
 
-**Q1.4** Through `ping` with a single ICMP packet, report the output of the connectivity test between: `ha-r1`, `hb-R1`, `ha-hb`.
+  * **Q1.4** Through `ping` with a single ICMP packet, report the output of the connectivity test between: `ha-r1`, `hb-R1`, `ha-hb`.
 
-**Q1.5** Through `traceroute`, report the output of the route `ha->hb` and of the route `hb->ha`. Are the same? Why?
+  * **Q1.5** Through `traceroute`, report the output of the route `ha->hb` and of the route `hb->ha`. Are the same? Why?
 
-**Q1.6** Through `iperf3`, report the average bandwidth between `ha` and `hb`. Recall that `iperf3 -s` runs as server and `iperf3 -c X.X.X.X` runs as client sending the traffic towards `X.X.X.X`. 
+  * **Q1.6** Through `iperf3`, report the average bandwidth between `ha` and `hb`. Recall that `iperf3 -s` runs as server and `iperf3 -c X.X.X.X` runs as client sending the traffic towards `X.X.X.X`. 
 
 ## 2. Linear topology
 
