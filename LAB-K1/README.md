@@ -1,6 +1,25 @@
 # LAB-K1. Docker hands-on
 
 Aim of this lab activity is to become familiar with the basic commands of `docker`, required in the following labs.
+NOTE WELL: if you work on the PCs in Dijkstra room, it is advisable to use always the same PC for the whole course, as your files will be stored on that machine (only).
+
+ON DIJKSTRA PCs:
+To access the Ubuntu virtual machine (VM) in the Dykstra lab using a PC:
+-At the GUI login screen, enter the complete username: completi/reti2026PWD (use this exact format, including the slash).
+-Log in with the assigned password for the reti2026 course (ask the instructor or lab assistant if unknown).
+-Once logged in, the Ubuntu VM will automatically start and display in full-screen console mode.
+-Run Docker.
+
+Shutdown Steps
+Shut down properly by running the command poweroff in the terminal (or via the GUI shutdown menu if available).
+Do not use the host PC's power button, Ctrl+Alt+Del, or close the window—this can corrupt the VM.
+Wait for the VM to fully power off, then log out of the host PC GUI.
+The full-screen view maximizes the console; use Ctrl+Alt or lab-specific keys to switch if needed (test during first session).
+Report any login or VM startup issues to the lab supervisor immediately.
+
+
+ON YOUR DEVICE:
+0. Download and install Docker (if you are on your own device).
 
 1. Open a terminal and type `docker run hello-world` to check that `docker` works properly
 
