@@ -8,14 +8,14 @@ ON DIJKSTRA PCs:
 
 To access the Ubuntu virtual machine (VM) in the Dykstra lab using a PC:
 
--At the GUI login screen, enter username and password as follows:
+*Item 1 At the GUI login screen, enter username and password as follows:
 
 Username: complreti
 Password: reti2026PWD
 
-* Item Once logged in, the Ubuntu VM will automatically start and display in full-screen console mode.
+* Item 2 Once logged in, the Ubuntu VM will automatically start and display in full-screen console mode.
 
-*item Run Docker.
+* Item 3 Run Docker.
 
 **Shutdown Steps:**
 
