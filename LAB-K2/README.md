@@ -26,6 +26,7 @@ All the activities for the class labs are instead available under the  local `Da
    Why does latency change over time?
      * Q7. What is the output of `kathara linfo` when the lab is running?
      * Q8. What is the output of `kathara list` when the lab is running?
+     * Q9. Show the routing table at both hosts. What is the meaning of what you see? Who configured that? 
    * Within a container of a device, create a file (e.g., using `touch prova.txt`)
      and copy into `/shared` folder. Make sure you can access it from
      any other container and from the local file system. Note that
@@ -34,7 +35,7 @@ All the activities for the class labs are instead available under the  local `Da
      persistent storage. Try with `ip -4 address > shared/ip.txt` and open the
      file with `gedit` from the local file system.
    * Now stop the lab using `kathara lclean`.
-     * Q9. What is the current state of images and running containers after closing Kathara? Show the outputs of the proper `docker` commands.
+     * Q10. What is the current state of images and running containers after closing Kathara? Show the outputs of the proper `docker` commands.
 
 ## Reference commands
 
