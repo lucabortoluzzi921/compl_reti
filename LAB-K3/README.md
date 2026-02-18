@@ -48,12 +48,10 @@ Run the lab through `kathara lstart` and test connectivity and performance
   * **Q1.2** Through `ip route`, report the routing tables for `ha`, `hb` and `r1`.
 
   * **Q1.3** Report the three routing tables according to the following scheme:
-  | Network prefix | Gateway | Interface |
-
-  |---|---|---|
-
-  | ... |   |   |
-
+    
+    | Network prefix | Gateway | Interface |
+    |---             |---      |---        |
+    | ...            |         |           |
 
   * **Q1.4** Through `ping` with a single ICMP packet, report the output of the connectivity test between: `ha-r1`, `hb-R1`, `ha-hb`.
 
