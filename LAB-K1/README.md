@@ -17,7 +17,7 @@ Password: reti2026PWD
 
 -Run Docker.
 
-Shutdown Steps:
+*Shutdown Steps:*
 
 Shut down properly by running the command poweroff in the terminal (or via the GUI shutdown menu if available).
 
