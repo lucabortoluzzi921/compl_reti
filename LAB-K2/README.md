@@ -20,13 +20,12 @@ All the activities for the class labs are instead available under the  local `Da
      * Q2. What are the routing tables?
      * Q3. What is the current state of images and running containers, before starting Kathara? Show the outputs of the proper `docker` commands.
    * Start the lab with `kathara lstart`.
-   * Q4. What is the current state of images and running containers after starting Kathara? Show the outputs of the proper `docker` commands.
-   * Q5. Use `ip` command (see the reference table below) to show the IP addresses of the interfaces and the routing tables, for both hosts. 
-   * Q6. Using `ping`, check the connectivity between the two hosts and report the output. What is going on?
+     * Q4. What is the current state of images and running containers after starting Kathara? Show the outputs of the proper `docker` commands.
+     * Q5. Use `ip` command (see the reference table below) to show the IP addresses of the interfaces and the routing tables, for both hosts. 
+     * Q6. Using `ping`, check the connectivity between the two hosts and report the output. What is going on?
    Why latency changes over time?
-  
-   * Q7. What is the output of `kathara linfo` when the lab is running?
-   * Q8. What is the output of `kathara list` when the lab is running?
+     * Q7. What is the output of `kathara linfo` when the lab is running?
+     * Q8. What is the output of `kathara list` when the lab is running?
    * Within a container of a device, create a file (e.g., using `touch prova.txt`)
      and copy into `/shared` folder. Make sure you can access it from
      any other container and from the local file system. Note that
@@ -35,7 +34,7 @@ All the activities for the class labs are instead available under the  local `Da
      persistent storage. Try with `ip -4 address > shared/ip.txt` and open the
      file with `gedit` from the local file system.
    * Now stop the lab using `kathara lclean`.
-   * Q9. What is the current states of images and running containers, after closing kathara? Show the outputs of the proper `docker` commands.
+     * Q9. What is the current state of images and running containers after closing Kathara? Show the outputs of the proper `docker` commands.
 
 ## Reference commands
 
