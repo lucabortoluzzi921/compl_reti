@@ -71,11 +71,11 @@ Implement the required changes. Restart the lab. Go again through Q1.1-1.4. Is t
   
   * **Q1.5** Through `traceroute`, report the output of the route `ha->hb` and of the route `hb->ha`. Are the same? Why?
 
-# iPerf3 Overview
+### iPerf3 Overview
 
 **iPerf3** is an open-source tool for measuring maximum TCP, UDP, or SCTP bandwidth on IP networks, reporting throughput, loss, and jitter between two endpoints. [iperf](https://iperf.fr)
 
-## Basic Usage (Client-Server Model)
+#### Basic Usage (Client-Server Model)
 - **Server**: `iperf3 -s` (listens on port 5201).
 - **Client**: `iperf3 -c <server_IP>` (client-to-server, 10s test).
 - **Reverse**: `iperf3 -c <server_IP> -R` (server-to-client).
