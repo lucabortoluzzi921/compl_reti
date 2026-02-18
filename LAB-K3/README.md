@@ -81,7 +81,7 @@ Implement the required changes. Restart the lab. Go again through Q1.1-1.4. Is t
 - **Reverse**: `iperf3 -c <server_IP> -R` (server-to-client).
 - **UDP**: Add `-u`; bandwidth `-b 10M`.
 
-  * **Q1.6** Through `iperf3`, report the average bandwidth between `ha` and `hb`. Recall that `iperf3 -s` runs as server and `iperf3 -c X.X.X.X` runs as client sending the traffic towards `X.X.X.X`. 
+* **Q1.6** Through `iperf3`, report the average bandwidth between `ha` and `hb`. Recall that `iperf3 -s` runs as server and `iperf3 -c X.X.X.X` runs as client sending the traffic towards `X.X.X.X`. 
 
 ## 2. Linear topology
 
