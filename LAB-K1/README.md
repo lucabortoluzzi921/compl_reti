@@ -1,6 +1,6 @@
 # LAB-K1. Docker hands-on
 
-Aim of this lab activity is to become familiar with the basic commands of `docker`, required in the following labs.
+The aim of this lab activity is to become familiar with the basic commands of `docker`, required in the following labs.
 
 NOTE WELL: If you work on the PCs in Dijkstra's room, it is advisable to always use the same PC for the whole course, as your files will be stored on that machine (only).
 
@@ -36,8 +36,8 @@ ON YOUR DEVICE:
 2. Open the tutorial on https://docker-curriculum.com/ with the Chrome browser 
 > [!TIP]
 > Follow carefully the steps below and do not skip any detail, since they will become very useful in the following labs.
-3. Read the section **INTRODUCTION** and answer to the following questions:
-   - Q1: What is a container and how is it different from a Virtual Machine (VM)? In which terms containers are "better" than VMs?
+3. Read the section **INTRODUCTION** and answer the following questions:
+   - Q1: What is a container, and how is it different from a Virtual Machine (VM)? In which terms containers are "better" than VMs?
    - Q2: What is the meaning of _isolation_ for  VMs and containers?
 
 > [!WARNING]
