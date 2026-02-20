@@ -3,8 +3,9 @@
 The aim of this lab is (i) to learn the basic usage of [Kathara](https://www.kathara.org) to emulate simple networks and (ii) to review basic IPv4 routing. 
 
 ON YOUR DEVICE:
-0. Download and install Kathara'. Follow instructions on.
 
+0. Download and install Kathara'. Follow instructions on.
+```shell
 If installing on Debian 12/13, here are the commands (after installing Docker) that should install Kathara (resolved with Gemini):
 
 text
@@ -15,9 +16,9 @@ sudo apt update
 sudo apt install kathara  
   
 kathara check  
+```
 
-
-
+ON A PC IN DIJKSTRA:
 >[!NOTE]
 >The folders related to the official repository labs of Kathara are available under the local `Kathara-Labs` folder on the VM. 
 All the activities for the class labs are instead available under the  local `Datacenter-Lab-CE` folder, in order to simplify the copy&paste actions. All the folder references present in the following text refer to such a local folder.
