@@ -2,8 +2,10 @@
 
 The aim of this lab is (i) to learn the basic usage of [Kathara](https://www.kathara.org) to emulate simple networks and (ii) to review basic IPv4 routing. 
 
+ON YOUR DEVICE:
+0. Download and install Kathara'. Follow instructions on.
 
-I’m writing below the commands (after installing Docker) that should install Kathara on Debian 12/13 without problems (resolved with Gemini):
+If installing on Debian 12/13, here are the commands (after installing Docker) that should install Kathara (resolved with Gemini):
 
 text
 echo "deb [trusted=yes] http://ppa.launchpad.net/katharaframework/kathara/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/kathara.list  
