@@ -2,7 +2,7 @@
 
 ## 1. Single server topology
 In this lab, we will configure a topology in which router `r1` is connected to host `hb` on one
-interface and to host `bg` on the other interface. 
+interface and to host `ha` on the other interface. 
 
 ![Net3](Figs/net3.drawio.png)
 
