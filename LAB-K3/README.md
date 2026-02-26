@@ -55,18 +55,29 @@ ip address add 192.168.2.128/24 dev eth1
 Run the lab through `kathara lstart` and test connectivity and performance
 
   * **Q1.1** Through `ip address`, report the IP address for all the interfaces (excluded the local loop).
+    - pc1: eth0:
+          ip = 192.168.1.1/24
+    - pc2: eth0:
+          ip = 192.168.2.1/24
+    - r1: eth0:
+          ip = 192.168.1.128 - global eth0
+          ip = 192.168.1.3 - global secondary eth0
 
   * **Q1.2** Through `ip route`, report the routing tables for `ha`, `hb` and `r1`.
-
+    - pc1: default via 192.168.1.128 dev eth0
+    - pc2: default via 192.168.2.128 dev eth0
+    - r1: 192.168.1.0/24 dev eth0 proto kernel scope link src 192.168.1.128
+          192.168.2.0/24 dev eth0 proto kernel scope link src 192.168.2.128
+  
   * **Q1.3** Report the three routing tables according to the following scheme:
     
     | Network prefix | Gateway | Interface |
-    |---             |---      |---        |
+    |  ...           |---      |---        |
     | ...            |         |           |
 
   * **Q1.4** Through `ping` with a single ICMP packet, report the output of the connectivity test between: `ha-r1`, `hb-r1`, `ha-hb`. Is the network well configured?
     What is missing?
-
+    
 Implement the required changes. Restart the lab. Go again through Q1.1-1.4. Is the network properly configured now?
   
   * **Q1.5** Through `traceroute`, report the output of the route `ha->hb` and of the route `hb->ha`. Are the same? Why?
@@ -95,68 +106,124 @@ Consider the topology below.
 
 | Network | Network address|
 | ---| ---|
-| neta1  ||
-|net12  |   |
-| net2b| |
+| neta1  | 192.168.1.0/24|
+|net12  |   192.168.3.0/30|
+| net2b| 192.168.2.0/24|
 
 | Interface | IP address/netmask |
 |---|--- |
-| ha | |
-| hb
-| r1a | |
-| r12 | |
-| r21 | |
-| r2b | |
+| ha | 192.168.1.1/24|
+| hb  | 192.168.2.1/24|
+| r1a | 192.168.1.254/24|
+| r12 | 192.168.3.1/30|
+| r21 | 192.168.3.2/30|
+| r2b | 192.168.2.254/24|
 
   * **Q2.2** Configure the routing tables for each device. Fill in the following table.
 
 | Network prefix | Gateway | Interface |
 |---|---|---|
-|  ... |  |  |
+| 192.168.1.0/24 | 192.168.1.254/24 |  eth0 |
+| 192.168.2.0/24 | 192.168.2.254/24 |  eth0 |
+| 192.168.3.0/30 | ------------  |  ---- |
 
 Implement the scenario on Kathara by creating the necessary files. Run the scenario.
   * **Q2.3** Show the routing path `ha->hb` and `hb->ha` through `traceroute`. Check that the implemented configuration is the one intended.
+    -  ha->hb:
+              1 192.168.1.254
+              2 192.168.3.2
+              3 192.168.2.1
+    - hb->ha:
+              1 192.168.2.254
+              2 192.168.3.1
+              3 192.168.1.1
   * **Q2.4** What is the routing algorithm running at r1 and r2? How can you answer this question? Find the appropriate commands.
+    - In r1 and r2 is running a static routing algorithm, because the configurations are written manually, without using a protocol.
   * **Q2.5** Why is the routing problem solved in this way at r1 and r2? And how can the network example work, in this case? 
-
+    - It is solved because there are only three networks linked together by r1 and r2, so the static routing is good in this case. 
 ## 3. Routing in a loop topology
 
 Consider the topology below.
 
 ![Net1](Figs/net2.drawio.png)
 
-**Q3.1** Choose a proper addressing plan in order to minimize the waste of IP addresses, within the range M.0.0.0/8, where M is your matricola number modulo 100. Assume that at most 100 hosts could be connected to each network *neta1* and *net4b*. All the links between two routers are point-to-point. Fill the following table.
+**Q3.1** Choose a proper addressing plan in order to minimize the waste of IP addresses, within the range M.0.0.0/8(23.0.0.0/8), where M is your matricola number modulo 100(= 23). Assume that at most 100 hosts could be connected to each network *neta1* and *net4b*. All the links between two routers are point-to-point. Fill the following table.
 
 | Network | Network address|
 | ---| ---|
-| neta1  ||
-|net12  |   |
-|net24  |   |
-|net13  |   |
-|net34  |   |
-| net4b| |
+| neta1  | 23.0.0.0/25 |
+|net12  |  23.0.1.0/30 |
+|net24  |  23.0.2.0/30 |
+|net13  |  23.0.3.0/30 |
+|net34  |  23.0.4.0/30 |
+| net4b|  23.0.0.128/25 |
 
 | Interface | IP address/netmask |
 |---|--- |
-| ha | |
-| hb||
-| r1a ||
-| r12 | |
-| r13 | |
-| r21 ||
-| r24 ||
-| r31 ||
-| r34||
-| r42 ||
-|r43||
-|r4b||
+| ha | 23.0.0.1/25 |
+| hb | 23.0.0.129/25|
+| r1a | 23.0.0.126/25|
+| r12 | 23.0.1.1/30|
+| r13 | 23.0.3.1/30|
+| r21 | 23.0.1.2/30|
+| r24 | 23.0.2.1/30|
+| r31 | 23.0.3.2/30|
+| r34 | 23.0.4.1/30|
+| r42 | 23.0.2.2/30|
+| r43 | 23.0.4.2/30|
+| r4b | 23.0.0.254/25|
 
 
 **Q3.2** Configure the routing tables for each device such that *the traffic follow a clockwise direction within the loop* inside the topology. Fill the following table.
 
+**Host ha**
+
 | Network prefix | Gateway | Interface |
 |---|---|---|
-|  ... |  |  |
+|  23.0.0.0/25 | *  | eth0 |
+| default/0 | 23.0.0.8 | eth0|
+
+**Host hb**
+
+| Network prefix | Gateway | Interface |
+|---|---|---|
+|  23.0.0.128/25 | *  | eth0 |
+| default/0 | 23.0.0.136 | eth0|
+
+**Router r1**
+
+| Network prefix | Gateway | Interface |
+|---|---|---|
+|  23.0.0.0/25 | *  | eth0 |
+| 23.0.1.0/30 | * | eth1 |
+| 23.0.1.4/30 | * | eth2 |
+| default/0 | 23.0.1.2 | eth1|
+
+
+**Router r2**
+| Network prefix | Gateway | Interface |
+|---|---|---|
+|  23.0.1.0/30 | *  | eth0 |
+| 23.0.1.8/30 | * | eth1 |
+| 23.0.0.0/25 | 23.0.1.1 | eth0 |
+| default/0 | 23.0.1.23 | eth1|
+
+
+**Router r3**
+| Network prefix | Gateway | Interface |
+|---|---|---|
+|  23.0.1.4/30 | *  | eth0 |
+| 23.0.1.12/30 | * | eth1 |
+| 23.0.0.128/25 | 23.0.1.14 | eth1 |
+| default/0 | 23.0.1.5 | eth0|
+
+**Router r4**
+| Network prefix | Gateway | Interface |
+|---|---|---|
+|  23.0.0.128/25 | *  | eth0 |
+| 23.0.1.8/30 | * | eth1 |
+| 23.0.1.12/30 | * | eth2 |
+| 23.0.0.0/25 | 23.0.1.13 | eth2|
 
 **Q3.3** Show the output of `ping ` with a single ICMP packet from `ha` to `hb` and vice versa.
 
