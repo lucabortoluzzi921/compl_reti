@@ -29,10 +29,8 @@ This Repository contains the course material.
 * [LAB-K3](LAB-K3)
 
 # Week 4
-
-RIP
-[Intro to FRR](https://github.com/compl-reti-unito/25-26/blob/main/Theory_slides/frr.pdf)
-[RIP](https://github.com/compl-reti-unito/25-26/blob/main/Theory_slides/rip.pdf)
+* [Intro to FRR](https://github.com/compl-reti-unito/25-26/blob/main/Theory_slides/frr.pdf)
+* [RIP](https://github.com/compl-reti-unito/25-26/blob/main/Theory_slides/rip.pdf)
 
 
 
